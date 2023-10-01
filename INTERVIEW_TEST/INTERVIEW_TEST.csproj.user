@@ -13,9 +13,6 @@
     <Compile Update="Bai2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ViewXML.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Bai1.xaml">
@@ -25,9 +22,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ViewXML.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

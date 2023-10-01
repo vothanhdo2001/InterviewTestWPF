@@ -20,7 +20,7 @@ namespace INTERVIEW_TEST
     {
         private string Path;
         private string Content;
-
+        private TreeViewItem rootNode = new TreeViewItem();
         public Bai1()
         {
             InitializeComponent();
@@ -35,6 +35,23 @@ namespace INTERVIEW_TEST
             thread.Join();
             FilePath.Text = Path;
             Tree.Text = Content;
+            // Đọc tệp XML
+            string xmlFilePath = Path;
+            try {
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(xmlFilePath);
+                // Tạo nút gốc cho TreeView
+                rootNode.Header = xmlDoc.DocumentElement.GetAttribute("text");
+                xmlTreeView.Items.Add(rootNode);
+                // Gọi hàm để đọc các phần tử con và thêm chúng vào cây
+                AddXmlNodes(xmlDoc.DocumentElement, rootNode);
+            }
+            catch
+            {
+                MessageBox.Show("File không đúng định dạng XML");
+                return;
+            }
+
         }
 
         private void GetFile()
@@ -52,24 +69,19 @@ namespace INTERVIEW_TEST
             }
         }
 
-        private void ViewUI(object sender, RoutedEventArgs e)
+
+        private void AddXmlNodes(XmlNode xmlNode, TreeViewItem treeNode)
         {
-            string filePath = FilePath.Text;
-            XNode rootNode = new XNode();
-            rootNode = rootNode.LoadXmlFileToXNode(filePath);
-
-            if (rootNode != null)
+            foreach (XmlNode childNode in xmlNode.ChildNodes)
             {
-                // Bây giờ bạn có thể sử dụng rootNode để làm việc với dữ liệu XML đã được chuyển đổi
-                // Ví dụ: Hiển thị nó trong một TreeView
-                TreeView treeView = new TreeView();
-                //treeView.Nodes.Add(rootNode);
+                TreeViewItem childTreeNode = new TreeViewItem();
+                childTreeNode.Header = childNode.Attributes["text"]?.Value;
+
+                treeNode.Items.Add(childTreeNode);
+
+                // Đệ quy để thêm các phần tử con của phần tử hiện tại
+                AddXmlNodes(childNode, childTreeNode);
             }
-            ViewXML xmlUI = new ViewXML();
-            xmlUI.ShowDialog();
-
         }
-
-        
     }
 }

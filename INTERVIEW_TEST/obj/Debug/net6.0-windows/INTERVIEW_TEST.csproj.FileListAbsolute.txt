@@ -22,6 +22,3 @@ C:\Users\votha\Desktop\INTERVIEW_TEST\INTERVIEW_TEST\obj\Debug\net6.0-windows\Ba
 C:\Users\votha\Desktop\INTERVIEW_TEST\INTERVIEW_TEST\obj\Debug\net6.0-windows\Bai1.baml
 C:\Users\votha\Desktop\INTERVIEW_TEST\INTERVIEW_TEST\obj\Debug\net6.0-windows\Bai2.g.cs
 C:\Users\votha\Desktop\INTERVIEW_TEST\INTERVIEW_TEST\obj\Debug\net6.0-windows\Bai2.baml
-C:\Users\votha\Desktop\INTERVIEW_TEST\INTERVIEW_TEST\obj\Debug\net6.0-windows\ViewXML.g.cs
-C:\Users\votha\Desktop\INTERVIEW_TEST\INTERVIEW_TEST\obj\Debug\net6.0-windows\ViewXML.baml
-C:\Users\votha\Desktop\INTERVIEW_TEST\INTERVIEW_TEST\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
