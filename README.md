@@ -4,6 +4,9 @@
 * **SDT**: 0399054682
 ## Yêu cầu hệ thống
 * **Phiên bản .NET**: .NET 6.0
+* **Loại ứng dụng**: **WPF**
+## Hướng dẫn sử dụng
+* **Clone project về máy, sử dụng VS Studio để chạy**
 ## Một số hình ảnh
 * **Màn hình khởi động**:
 * <img src="/Images/1.png">
